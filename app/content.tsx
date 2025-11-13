@@ -88,9 +88,9 @@ export const companies = [
             description: "Opisoft is a HIPAA-compliant growth and operations platform for Opioid Treatment Programs, unifying telehealth, secure messaging, SMS outreach and AI reputation tools.",
             images: [
                 "/opisoft-1.jpg",
-                "/hb-2.jpg",
-                "/hb-3.jpg",
-                "/hb-4.jpg",
+                "/opisoft-2.jpg",
+                "/opisoft-3.jpg",
+                "/opisoft-4.jpg",
             ],
             url: "https://brightviewgroup.com",
             isSiteComingSoon: true,
