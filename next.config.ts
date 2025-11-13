@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    root: __dirname,
-  },
+  // Turbopack config removed - only applies to dev mode, not production builds on Vercel
 };
 
 export default nextConfig;
