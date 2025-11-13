@@ -107,7 +107,7 @@ const CompanySidePanel = ({ company, isOpen, onClose }: CompanySidePanelProps) =
                     </div>
 
                     <div className={`w-full h-full p-8 flex flex-col gap-16 overflow-y-auto pb-50`}>
-                        <div className="grid grid-cols-5 gap-16">
+                        <div className="flex flex-col md:grid grid-cols-5 gap-16">
                             <div className="col-span-3 flex flex-col gap-6">
                                 <h2 className="text-2xl font-bold text-gray-900">{company?.oneliner}</h2>
                                 <p className="text-2xl font-light text-gray-900">{company?.description}</p>
