@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import CompaniesCard from "./components/companies/card";
 import CompanySidePanel from "./components/companies/sidePanel";
