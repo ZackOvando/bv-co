@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const TRANSITION_MS = 500; // animation length in ms
 
-interface Company {
+export interface Company {
     bgColor: string;
     name: string;
     oneliner: string;

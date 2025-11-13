@@ -1,23 +1,20 @@
 'use client';
 import { useState } from 'react';
 import CompaniesCard from "./components/companies/card";
-import CompanySidePanel from "./components/companies/sidePanel";
+import CompanySidePanel, { Company } from "./components/companies/sidePanel";
 import { companies } from "./content";
 
-interface CompanyModalProps {
-  bgColor: string;
-  name: string;
-  oneliner: string;
-  description: string;
-  images: string[];
+interface FullCompany {
+  modal: Company;
+  [key: string]: any;
 }
 
 export default function Home() {
-  const [selectedCompany, setSelectedCompany] = useState<CompanyModalProps | null>(null);
+  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
-  const handleModalOpen = (company: CompanyModalProps) => {
-    setSelectedCompany(company);
+  const handleModalOpen = (company: FullCompany) => {
+    setSelectedCompany(company.modal);
     setIsPanelOpen(true);
   };
 
@@ -30,7 +27,7 @@ export default function Home() {
   return (
     <>
       <CompanySidePanel
-        company={selectedCompany?.modal as unknown as CompanyModalProps}
+        company={selectedCompany}
         isOpen={isPanelOpen}
         onClose={handleClosePanel}
       />
