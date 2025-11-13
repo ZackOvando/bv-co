@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 const CompaniesCard = ({ company, onModalOpen }: { company: any, onModalOpen: (company: any) => void }) => {
-    const handleClick = (e) => {
+    const handleClick = (e: any) => {
         if (company.type === "external") {
             window.open(company.url, "_blank", "noopener,noreferrer");
         } else if (company.type === "modal" && onModalOpen) {
