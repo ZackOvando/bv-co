@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const companies = [
     {
         name: "Betzon",
@@ -27,7 +25,8 @@ export const companies = [
         }
     },
     {
-        name: <>BrightView <br /> Group</>,
+        name: "BrightView Group",
+        nameWithBreak: true,
         description: "Description 2",
         image: "/bv-bg.jpg",
         logo: "/brightviewlogo.png",

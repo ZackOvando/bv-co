@@ -29,7 +29,15 @@ const CompaniesCard = ({ company, onModalOpen }: { company: any, onModalOpen: (c
                         <Image src={company.logo} alt={company.name} width={company.logoWidth} height={company.logoHeight} />
                     )
                 }
-                <h2 className={`text-white ${company.textSize} font-bold drop-shadow leading-tight`}>{company.name}</h2>
+                <h2 className={`text-white ${company.textSize} font-bold drop-shadow leading-tight`}>
+                    {company.nameWithBreak ? (
+                        <>
+                            BrightView <br /> Group
+                        </>
+                    ) : (
+                        company.name
+                    )}
+                </h2>
             </div>
 
             <div className="absolute inset-0 z-10 transition-colors duration-400 bg-black/70 group-hover:bg-black/80" />
