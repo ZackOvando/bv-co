@@ -5,11 +5,28 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const TRANSITION_MS = 500; // animation length in ms
 
-const CompanySidePanel = ({ company, isOpen, onClose }: { company: any, isOpen: boolean, onClose: () => void }) => {
+interface Company {
+    bgColor: string;
+    name: string;
+    oneliner: string;
+    description: string;
+    images: string[];
+    url: string;
+    website?: string;
+    isSiteComingSoon?: boolean;
+}
+
+interface CompanySidePanelProps {
+    company: Company | null;
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+const CompanySidePanel = ({ company, isOpen, onClose }: CompanySidePanelProps) => {
     // mounted = component exists in DOM; visible = CSS-open state that triggers transitions
-    const [mounted, setMounted] = useState(false);
-    const [visible, setVisible] = useState(false);
-    const panelRef = useRef(null);
+    const [mounted, setMounted] = useState<boolean>(false);
+    const [visible, setVisible] = useState<boolean>(false);
+    const panelRef = useRef<HTMLElement | null>(null);
 
     // Drive mounted/visible from isOpen + company
     useEffect(() => {
@@ -45,7 +62,7 @@ const CompanySidePanel = ({ company, isOpen, onClose }: { company: any, isOpen: 
 
     // ESC to close (only when visible)
     useEffect(() => {
-        const onKey = (e) => {
+        const onKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape' && visible) onClose();
         };
         window.addEventListener('keydown', onKey);
@@ -62,6 +79,8 @@ const CompanySidePanel = ({ company, isOpen, onClose }: { company: any, isOpen: 
                 className={`fixed inset-0 z-50 bg-black/50 transition-opacity duration-500 ease-in-out ${visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                     }`}
                 aria-hidden={!visible}
+                role="button"
+                tabIndex={-1}
             />
 
             {/* Side Panel */}
