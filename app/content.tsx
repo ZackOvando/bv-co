@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const companies = [
     {
         name: "Betzon",
@@ -13,7 +15,7 @@ export const companies = [
             bgColor: "bg-orange-100",
             name: "Betzon",
             oneliner: "Peer-to-peer Daily SportsFantasy",
-            description: "Betzon is a mobile-first peer-to-peer fantasy sports and esports marketplace built on “No House, No Vig, No Rig” principles.",
+            description: "Betzon is a mobile-first peer-to-peer fantasy sports and esports marketplace built on \"No House, No Vig, No Rig\" principles.",
             images: [
                 "/betzon-1.jpg",
                 "/betzon-2.jpg",
@@ -96,3 +98,4 @@ export const companies = [
         }
     },
 ]
+
