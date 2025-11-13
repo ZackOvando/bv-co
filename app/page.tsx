@@ -32,7 +32,7 @@ export default function Home() {
         onClose={handleClosePanel}
       />
 
-      <div className="bg-[#0016DA] w-screen min-h-screen flex justify-center">
+      <div className="bg-[#0016DA] w-screen min-h-screen flex justify-center pb-48">
         <div className="container w-full px-4 md:px-0">
 
           <h1 className="font-sans font-bold text-white text-6xl mb-8 py-50">
